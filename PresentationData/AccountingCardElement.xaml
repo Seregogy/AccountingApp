@@ -1,0 +1,40 @@
+﻿<UserControl
+    x:Class="AccountingApp.PresentationData.AccountingCardElement"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:media="using:Microsoft.UI.Xaml.Media"
+    xmlns:other="using:AccountingApp.Other"
+    xmlns:local="using:AccountingApp.PresentationData"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="280"
+    d:DesignWidth="210">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <media:AcrylicBrush x:Key="CustomAcrylicInAppLuminosity" TintOpacity="0.1" TintLuminosityOpacity="0.2" TintColor="SkyBlue" FallbackColor="SkyBlue" />
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid CornerRadius="10" Background="{StaticResource CustomAcrylicInAppLuminosity}" Width="200" Height="280" Margin="5" PointerReleased="Grid_PointerReleased">
+        <StackPanel>
+            <TextBlock Text="{x:Bind Accounting.AccountingCard.ShortName}" FontWeight="Bold" FontSize="20" Margin="10"/>
+            <NavigationViewItemSeparator/>
+
+            <StackPanel Margin="10, -4, 0, 0" HorizontalAlignment="Left" Spacing="2" VerticalAlignment="Top">
+                <other:Tag TagName="CardID" Key="{x:Bind Accounting.AccountingCard.CardID}"/>
+                <other:Tag TagName="SubsectionID" Key="{x:Bind Accounting.AccountingCard.SubsectionID}"/>
+                <other:Tag TagName="PcID" Key="{x:Bind Accounting.AccountingCard.PcCID}"/>
+                <other:Tag TagName="OrgtechID" Key="{x:Bind Accounting.AccountingCard.OrgtechID}"/>
+                <other:Tag TagName="FrameID" Key="{x:Bind Accounting.AccountingCard.FrameID}"/>
+                <other:Tag TagName="FloorID" Key="{x:Bind Accounting.AccountingCard.FloorID}"/>
+            </StackPanel>
+        </StackPanel>
+        <other:Tag TagName="{x:Bind Accounting.AccountingCard.Date}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0, 0, 0, 5"/>
+    </Grid>
+</UserControl>

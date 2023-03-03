@@ -1,30 +1,54 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-
-// Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x419
+using Windows.UI.Xaml.Media.Animation;
 
 namespace AccountingApp
 {
-    /// <summary>
-    /// Пустая страница, которую можно использовать саму по себе или для перехода внутри фрейма.
-    /// </summary>
     public sealed partial class MainPage : Page
     {
         public MainPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
+
+            Loaded += (x, y) => Instance = this;
+        }
+
+        private string currentPageName;
+        private static MainPage mainPage;
+
+        public Page currentPage;
+
+        public static MainPage Instance { get => mainPage; private set => mainPage = value; }
+
+        public string CurrentPageName
+        {
+            get => currentPageName;
+            private set
+            {
+                currentPageName = value;
+                MainNav.PaneTitle = value;
+            }
+        }
+
+        private void Main_SelectionChanged(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs args)
+        {
+            Microsoft.UI.Xaml.Controls.NavigationViewItem item = args.SelectedItem as Microsoft.UI.Xaml.Controls.NavigationViewItem;
+
+            if (!args.IsSettingsSelected && item.Tag != null)
+                NavigateFrame(item.Tag.ToString(), null);
+        }
+
+        private void MainFrame_Loaded(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            NavigateFrame("HomePage", null);
+        }
+
+        public void NavigateFrame(string name, object data)
+        {
+            string type = $"{nameof(AccountingApp)}.{nameof(Pages)}.{name}";
+
+            MainFrame.Navigate(Type.GetType(type), data, new DrillInNavigationTransitionInfo());
+            MainNav.PaneTitle = name;
         }
     }
 }

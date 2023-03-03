@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="AccountingApp.Pages.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:card="using:AccountingApp.PresentationData"
+    xmlns:local="using:AccountingApp.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <TextBlock Text="List of accounting items" FontSize="40" HorizontalAlignment="Center" Margin="20" FontWeight="Bold" x:Name="ListText"/>
+        
+        <ScrollViewer Margin="50, 100, 10, 30">
+            <GridView SelectionMode="None" x:Name="ListOfItems">
+            </GridView>
+        </ScrollViewer>
+    </Grid>
+</Page>
