@@ -1,0 +1,610 @@
+{
+    "Processors" : [
+        {
+            "ProcessorName": "AMD Ryzen 5 3600",
+            "ProcessorSocket": "AM4",
+            "IsGraphicsExists": false
+        },
+        {
+            "ProcessorName": "AMD Ryzen 5 5600X",
+            "ProcessorSocket": "AM4",
+            "IsGraphicsExists": false
+        },
+        {
+            "ProcessorName": "AMD Ryzen 7 5800X",
+            "ProcessorSocket": "AM4",
+            "IsGraphicsExists": false
+        },
+        {
+            "ProcessorName": "AMD Ryzen 7 7700X",
+            "ProcessorSocket": "AM5",
+            "IsGraphicsExists": true
+        },
+        {
+            "ProcessorName": "AMD Ryzen 5 7600X",
+            "ProcessorSocket": "AM5",
+            "IsGraphicsExists": true
+        },
+        {
+            "ProcessorName": "AMD Ryzen 9 7900X",
+            "ProcessorSocket": "AM5",
+            "IsGraphicsExists": true
+        },
+        {
+            "ProcessorName": "AMD Ryzen 5 1600",
+            "ProcessorSocket": "AM4",
+            "IsGraphicsExists": false
+        },
+        {
+            "ProcessorName": "AMD Ryzen 5 1600X",
+            "ProcessorSocket": "AM4",
+            "IsGraphicsExists": false
+        },
+        {
+            "ProcessorName": "AMD Ryzen 5 2600",
+            "ProcessorSocket": "AM4",
+            "IsGraphicsExists": false
+        },
+        {
+            "ProcessorName": "AMD Ryzen 5 2600X",
+            "ProcessorSocket": "AM4",
+            "IsGraphicsExists": false
+        },
+        {
+            "ProcessorName": "AMD Ryzen 7 2700X",
+            "ProcessorSocket": "AM4",
+            "IsGraphicsExists": false
+        },
+        {
+            "ProcessorName": "AMD Ryzen 7 3700X",
+            "ProcessorSocket": "AM4",
+            "IsGraphicsExists": true
+        },
+        {
+            "ProcessorName": "AMD Threadripper 5965WX",
+            "ProcessorSocket": "sWRX8",
+            "IsGraphicsExists": false
+        },
+        {
+            "ProcessorName": "AMD Threadripper 3960X",
+            "ProcessorSocket": "sTRX4",
+            "IsGraphicsExists": false
+        },
+        {
+            "ProcessorName": "Intel Xeon Silver 4214R",
+            "ProcessorSocket": "LGA 3647",
+            "IsGraphicsExists": false
+        },
+        {
+            "ProcessorName": "Intel Xeon E5-1620 v4",
+            "ProcessorSocket": "LGA 2011-3",
+            "IsGraphicsExists": false
+        },
+        {
+            "ProcessorName": "Intel Xeon E5-2609 v4",
+            "ProcessorSocket": "LGA 2011-3",
+            "IsGraphicsExists": false
+        },
+        {
+            "ProcessorName": "Intel Xeon E5-2630 v4",
+            "ProcessorSocket": "LGA 2011-3",
+            "IsGraphicsExists": false
+        },
+        {
+            "ProcessorName": "Intel Core i5-12400",
+            "ProcessorSocket": "LGA 1700",
+            "IsGraphicsExists": true
+        },
+        {
+            "ProcessorName": "Intel Core i5-11400F",
+            "ProcessorSocket": "LGA 1200",
+            "IsGraphicsExists": false
+        },
+        {
+            "ProcessorName": "Intel Core i5-10400F",
+            "ProcessorSocket": "LGA 1200",
+            "IsGraphicsExists": false
+        },
+        {
+            "ProcessorName": "Intel Core i7-12700",
+            "ProcessorSocket": "LGA 1700",
+            "IsGraphicsExists": true
+        },
+        {
+            "ProcessorName": "Intel Core i3-10105F",
+            "ProcessorSocket": "LGA 1200",
+            "IsGraphicsExists": false
+        },
+        {
+            "ProcessorName": "Intel Core i5-12400",
+            "ProcessorSocket": "LGA 1700",
+            "IsGraphicsExists": true
+        },
+        {
+            "ProcessorName": "Intel Core i7-12700K",
+            "ProcessorSocket": "LGA 1700",
+            "IsGraphicsExists": true
+        },
+        {
+            "ProcessorName": "Intel Core i5-10400",
+            "ProcessorSocket": "LGA 1200",
+            "IsGraphicsExists": true
+        },
+        {
+            "ProcessorName": "Intel Core i3-12100",
+            "ProcessorSocket": "LGA 1700",
+            "IsGraphicsExists": true
+        },
+        {
+            "ProcessorName": "Intel Core i3-10105",
+            "ProcessorSocket": "LGA 1200",
+            "IsGraphicsExists": true
+        },
+        {
+            "ProcessorName": "Intel Core i3-12100F",
+            "ProcessorSocket": "LGA 1700",
+            "IsGraphicsExists": false
+        },
+        {
+            "ProcessorName": "Intel Core i9-11900F ",
+            "ProcessorSocket": "LGA 1200",
+            "IsGraphicsExists": false
+        },
+        {
+            "ProcessorName": "Intel Core i9-11900",
+            "ProcessorSocket": "LGA 1200",
+            "IsGraphicsExists": true
+        },
+        {
+            "ProcessorName": "Intel Core i9-10900KF",
+            "ProcessorSocket": "LGA 1200",
+            "IsGraphicsExists": false
+        },
+        {
+            "ProcessorName": "Intel Core i9-12900F ",
+            "ProcessorSocket": "LGA 1700",
+            "IsGraphicsExists": true
+        },
+        {
+            "ProcessorName": "Intel Core i9-10980XE",
+            "ProcessorSocket": "LGA 2066",
+            "IsGraphicsExists": true
+        }
+    
+    ],
+    "GraphicCards" : [
+        {
+            "GraphicsCardName": "AMD Radeon RX 5700XT",
+            "Interfaces": "HDMI/DisplayPort",
+            "Frequency": "1905 Mhz",
+            "ProcessorsCount": 2560,
+            "VideoMemory": 8
+        },
+        {
+            "GraphicsCardName": "AMD Radeon RX 6600",
+            "Interfaces": "HDMI/DisplayPort",
+            "Frequency": "1626 Mhz",
+            "ProcessorsCount": 1792,
+            "VideoMemory": 8
+        },
+        {
+            "GraphicsCardName": "AMD Radeon RX 6700 XT",
+            "Interfaces": "HDMI/DisplayPort",
+            "Frequency": "2321 Mhz",
+            "ProcessorsCount": 2560,
+            "VideoMemory": 8
+        },
+        {
+            "GraphicsCardName": "AMD Radeon RX 550",
+            "Interfaces": "HDMI/DisplayPort",
+            "Frequency": "1900 Mhz",
+            "ProcessorsCount": 512,
+            "VideoMemory": 4
+        },
+        {
+            "GraphicsCardName": "AMD Radeon RX 6650 XT",
+            "Interfaces": "HDMI/DisplayPort",
+            "Frequency": "2055 Mhz",
+            "ProcessorsCount": 2048,
+            "VideoMemory": 8
+        },
+        {
+            "GraphicsCardName": "AMD Radeon RX 6800",
+            "Interfaces": "HDMI/DisplayPort",
+            "Frequency": "1700 Mhz",
+            "ProcessorsCount": 3840,
+            "VideoMemory": 16
+        },
+        {
+            "GraphicsCardName": "AMD Radeon RX 6750 XT",
+            "Interfaces": "HDMI/DisplayPort",
+            "Frequency": "2150 Mhz",
+            "ProcessorsCount": 2560,
+            "VideoMemory": 8
+        },
+        {
+            "GraphicsCardName": "AMD Radeon RX 580",
+            "Interfaces": "HDMI/DisplayPort",
+            "Frequency": "1257 Mhz",
+            "ProcessorsCount": 2304,
+            "VideoMemory": 8
+        },
+        {
+            "GraphicsCardName": "AMD Radeon RX 570",
+            "Interfaces": "HDMI/DisplayPort",
+            "Frequency": "1168 Mhz",
+            "ProcessorsCount": 2048,
+            "VideoMemory": 8
+        },
+        {
+            "GraphicsCardName": "AMD Radeon RX 560",
+            "Interfaces": "HDMI/DisplayPort",
+            "Frequency": "1175 Mhz",
+            "ProcessorsCount": 1024,
+            "VideoMemory": 4
+        },
+        {
+            "GraphicsCardName": "AMD Radeon R9 380",
+            "Interfaces": "HDMI/DisplayPort",
+            "Frequency": "970 Mhz",
+            "ProcessorsCount": 1792,
+            "VideoMemory": 2
+        },
+        {
+            "GraphicsCardName": "AMD Radeon RX 460",
+            "Interfaces": "HDMI/DisplayPort",
+            "Frequency": "1090 Mhz",
+            "ProcessorsCount": 896,
+            "VideoMemory": 2
+        },
+        {
+            "GraphicsCardName": "NVIDIA GeForce RTX 3080",
+            "Interfaces": "HDMI/DisplayPort",
+            "Frequency": "1500 Mhz",
+            "ProcessorsCount": 6400,
+            "VideoMemory": 10
+        },
+        {
+            "GraphicsCardName": "NVIDIA GeForce RTX 2060 Super",
+            "Interfaces": "HDMI/DisplayPort",
+            "Frequency": "1470 Mhz",
+            "ProcessorsCount": 2176,
+            "VideoMemory": 8
+        },
+        {
+            "GraphicsCardName": "NVIDIA RTX A400",
+            "Interfaces": "HDMI/DisplayPort",
+            "Frequency": "735 Mhz",
+            "ProcessorsCount": 6144,
+            "VideoMemory": 16
+        },
+        {
+            "GraphicsCardName": "NVIDIA Quadro RTX 4000",
+            "Interfaces": "HDMI/DisplayPort",
+            "Frequency": "1005 Mhz",
+            "ProcessorsCount": 2304,
+            "VideoMemory": 8
+        },
+        {
+            "GraphicsCardName": "nVidia Titan RTX",
+            "Interfaces": "HDMI/DisplayPort",
+            "Frequency": "1350 Mhz",
+            "ProcessorsCount": 4608,
+            "VideoMemory": 24
+        },
+        {
+            "GraphicsCardName": "GeForce RTX 3070 Ti",
+            "Interfaces": "HDMI/DisplayPort",
+            "Frequency": "1575 Mhz",
+            "ProcessorsCount": 6144,
+            "VideoMemory": 8
+        },
+        {
+            "GraphicsCardName": "GeForce RTX 3060",
+            "Interfaces": "HDMI/DisplayPort",
+            "Frequency": "1320 Mhz",
+            "ProcessorsCount": 3584,
+            "VideoMemory": 12
+        },
+        {
+            "GraphicsCardName": "GeForce GTX 1660 SUPER",
+            "Interfaces": "HDMI/DisplayPort",
+            "Frequency": "1530 Mhz",
+            "ProcessorsCount": 1408,
+            "VideoMemory": 6
+        },
+        {
+            "GraphicsCardName": "GeForce RTX 4070 Ti",
+            "Interfaces": "HDMI/DisplayPort",
+            "Frequency": "2310 Mhz",
+            "ProcessorsCount": 7680,
+            "VideoMemory": 12
+        }        
+    ],
+    "IpAdresses" : [
+        "64.34.12.204",
+        "154.48.69.150",
+        "75.64.235.190",
+        "130.170.233.92",
+        "243.74.39.228",
+        "225.143.93.182",
+        "199.158.105.71",
+        "141.60.8.107",
+        "136.77.60.112",
+        "43.216.2.158",
+        "196.137.122.103", 
+        "31.213.214.177",
+        "253.182.186.161",
+        "233.10.44.101",
+        "36.228.128.128",
+        "56.54.79.17",
+        "149.21.165.230",
+        "61.167.90.207",
+        "89.174.98.160",
+        "171.254.42.169",
+        "137.65.131.0",
+        "4.35.60.48",
+        "173.199.197.195",
+        "254.105.127.79",
+        "208.122.47.33",
+        "177.22.190.101",
+        "114.128.178.114",
+        "136.98.244.103",
+        "74.150.251.201",
+        "178.100.49.176 ",
+        "169.160.48.56",
+        "102.133.8.174",
+        "243.118.69.82",
+        "89.77.4.194",
+        "6.31.36.24",
+        "14.60.138.37",
+        "40.151.235.162",
+        "7.199.118.68",
+        "150.42.242.243",
+        "198.248.220.15",
+        "55.244.79.172",
+        "52.53.0.226",
+        "169.149.132.162",
+        "18.198.128.92",
+        "153.97.160.145",
+        "49.142.52.150",
+        "188.130.181.170",
+        "200.27.98.94",
+        "132.199.186.204",
+        "52.121.29.36"
+    ],
+    "Keys" : [
+        "06O6X-84T2U-YM6B6-5WTOT-60378",
+        "AHRI8-5D4E0-4MI67-OV1FN-050NA",
+        "DXL36-N0854-DPW38-31BY0-44VBH",
+        "03FG1-PV053-3H4BS-8OUHX-P15A3",
+        "205B3-MMY57-VE8B4-76631-EY682",
+        "EJKI0-6MLNY-3M0QV-68WD2-3SFPR",
+        "701SF-7J315-OP7O1-7023F-N8A4T",
+        "7TTCW-8A0AH-278YT-0J64F-2NUK5",
+        "68G2X-M4C65-IKJC7-16DD3-18L2Y",
+        "BDL1D-6EL80-E6NM5-L57EM-01FJN",
+        "R8O0B-713VA-NQT3D-2U1N1-QSA2X",
+        "8OXPY-Y6YW1-8VTUX-5023U-7R1I0",
+        "85777-08201-1351Q-8621N-AGJ0K",
+        "UF6LP-4288T-P6N72-4631H-TMS4F",
+        "31KVF-QT660-P81L2-435YD-87YH1",
+        "548BO-WTO18-J72Q3-65850-68643",
+        "5QH2F-30I6U-S2M7R-SYA5T-DSMRO",
+        "P74AX-38273-0G5E6-T311W-2BJXQ",
+        "6X20Q-7P3OX-5C8C4-6N3B6-G00F4",
+        "C4D1V-D350C-5N1E2-H346Y-8UNET",
+        "3MI1C-SP12T-J3VGH-35IMN-EF1MV",
+        "PM4O6-XJG76-8R8V2-JX0F0-Q07V2",
+        "5250H-501UT-G05UC-41JMW-HME3L",
+        "E7X4E-XN8O0-J3214-735R8-I8DH5",
+        "7B4TE-35MUL-20O4F-3UX3Y-R0241",
+        "HNMI4-3OYN0-150II-N51ID-61357",
+        "FRX84-IJ7ST-XJ6HN-5MJ4T-4T032",
+        "FM553-QGFN0-FALRD-C72C8-58YCO",
+        "80E66-TH5WO-22B4C-1AH13-XA82G",
+        "26K00-45AWC-3WG7T-SE742-728XU",
+        "BA3DC-17GK7-PB2IE-35RTK-6L4F2",
+        "217EK-131RW-HF2E6-0L2FL-45XR7",
+        "IP07A-7J4VW-U3FMK-QVEYR-657O4",
+        "36PBA-M337A-A17F4-J6S5J-16814",
+        "O1Q55-I78VY-L70BD-A813W-3623V",
+        "H51AM-D8F80-PB6J5-2GL11-WKE4Q",
+        "G3J1B-BER32-153GP-SW17S-544U4",
+        "51BVB-K0W74-I0EP6-Q31T6-101TU",
+        "714M3-05Y7S-5IG78-K406I-866M2",
+        "7RURY-X03NT-B851W-LD408-3EJTN",
+        "0N77I-SJ583-T8KVU-5SRMJ-1WN8C",
+        "V6U1S-K3S56-C32B0-8N44O-WXT2C",
+        "P8104-6K154-5X50J-G3P04-1P6QH",
+        "E54R2-5B6YL-28MBX-43NH1-0UXOY",
+        "7A514-4T7RU-JGF4A-511G6-2X845",
+        "NBBV1-2B60Y-1C2OE-05550-RGK58",
+        "EA784-EB3R1-DC1CX-6K03D-W16WO",
+        "X7LEY-5856W-88H52-13450-PC1MN",
+        "D803E-MA0DI-TJ3X2-7ENV0-CXR6G",
+        "152CQ-C5XSF-K1F41-25FG6-85SI2",
+        "74F6L-1FO0E-ABS41-C030P-0VU62",
+        "13H67-JE5U2-R38L4-UW3X5-G72X1",
+        "1R18I-TH837-3NCA5-G38JQ-5XY4I",
+        "47PBH-35585-82RC3-UCT41-GG42D",
+        "45010-3ON86-06A81-R5V68-0458D",
+        "36188-4NSSJ-SJ273-8XF60-DP1VU",
+        "15252-2T68F-0YYMS-QD5M4-66G7Y",
+        "086BT-517F4-68U4S-BK58G-N75HS",
+        "H8XJ4-JD2C2-A6SP6-6750H-F16H6",
+        "7D0BL-18VE4-3506G-48BOQ-ERA67",
+        "3YEU0-RA8LS-FRA84-XF6OD-0G612",
+        "166K0-68YK2-5CMO1-0J0I8-TY36U",
+        "FG266-XTB32-NKI4A-H8C7L-7GW56",
+        "SR1GA-3IGQC-S8OYM-40QI5-1X231",
+        "8RU25-80M28-2A7VL-1M400-76834",
+        "U5D7S-GA1D3-B5T61-1318A-UILM2",
+        "R7W53-MNMTD-6LJ67-7UE64-4WC1P",
+        "T080W-6F0T3-4RE50-48N76-ODL4O",
+        "N821F-Y0684-S0PTW-585O2-A45G8",
+        "X5CV4-U5343-K37S2-NH246-06O1H",
+        "A8BM5-2K37B-J42MU-GPOEI-ATM1B",
+        "8P8WC-40363-H2OXH-0CP33-65I4Q",
+        "200XB-157QJ-45LT4-MX5MF-I675R",
+        "Q5287-EIS13-81G56-FL34D-8AA55",
+        "5M1BT-3R0S5-646C7-2OP30-L57G2",
+        "S3P8K-5WNM8-B533I-P6F41-E6SE1",
+        "ECS67-7VYAV-708RJ-O567H-3JX0T",
+        "57I1Y-PDMOT-EAMJ0-QVPXB-56C4W",
+        "3Q1BD-NV12K-5RYJ8-0H01L-11PXG",
+        "L035H-T3807-24280-WGHM2-55XYG",
+        "38B2M-FBJCR-P71S8-QJU0W-M5FGO",
+        "2P17B-0E187-6FFOY-3QQJO-G5663",
+        "5J3MH-1106C-5QIUE-G6URJ-17X5N",
+        "177A5-N8UW2-6SERX-P7VBY-20W5U",
+        "MUL8A-8HR45-B272H-53UND-3476H",
+        "H5XR8-6M7G3-D48UV-PM5Y6-1I47R",
+        "315XC-V4W5Y-06M45-Y20P7-6L560",
+        "23G5U-PBFIV-GME22-Q56N7-63T18",
+        "507T5-QI3X4-3BA7J-4S1C6-X7104",
+        "215JH-7E67N-PRM14-UUL5B-MN674",
+        "0E5L0-8P7T5-3AER0-35SR7-AS6O3",
+        "80RO5-I41K8-HT778-G3VHS-10C66",
+        "7RFU2-84DTS-OH1W5-8MO27-RJQJ4",
+        "7HK66-YCK30-PO5S1-2CF0O-GY0I0",
+        "0L4I8-8B3Y3-375L2-4X5JQ-KLFN3",
+        "EXG42-M3E56-8728U-BR7P6-HF84W",
+        "3CVKW-LG7CJ-136J7-415E1-EKIO6",
+        "60VC3-HQF7F-661EH-87751-Y2U66",
+        "TKL4D-NLI47-65TXU-510Q5-01U8I",
+        "6CG6T-P1J2V-YB06J-3FD24-51O51",
+        "RL51R-1AV33-B0JNI-3LXJF-TD840",
+        "J22J5-O7A61-6GNHF-8T1X1-516W2",
+        "44EJD-5K0RI-K4Y12-78PO0-FB078",
+        "2748U-24NWM-62J5K-F08AV-N371X",
+        "6216X-AYSKV-1D182-P40T1-SRWJG",
+        "ID84I-00RCM-253O5-TA40D-CKI31",
+        "I7WRL-C535L-7476P-S0PBI-362M0",
+        "Q2BCA-77C4S-M2LMT-16T75-K001E",
+        "6B4F7-3ERRW-RQTH0-3K844-A21MH",
+        "LY0JO-UBO4V-H4IIR-DWD6Q-TL0TS",
+        "78W5H-J03WT-8D8F6-EUIYD-36HTD",
+        "SR2N1-X2U65-61264-24I2Q-6M132",
+        "CG37X-04YYN-O5D33-3MNW6-CPYTQ",
+        "QA0AQ-RPQ8I-QHO85-1625B-COH13",
+        "66N54-2H005-14EUU-HS6E8-0LPWG",
+        "LPC8A-RX676-8AEJQ-46T71-SJYPO",
+        "K8E47-UE6J7-08M40-WMCT2-48I8U",
+        "Y2OR6-H721E-2CO01-XSAXR-JE8OI",
+        "UB5Y3-TYA76-DWNX7-UWK7F-2B0GV",
+        "BN215-FV4EE-8E53H-8OJ4D-IW8Y6",
+        "R0A5R-CY8XA-T6M31-HS736-81W5W",
+        "0R05B-ABIRW-37C75-U3VLK-7IVB7",
+        "OBJAL-QEE4I-LBSM1-5G2T7-6U382",
+        "VQJD3-SM82O-77PEY-NH1T4-85P8Q",
+        "5J4Y5-KEWRG-UE8KT-464EW-3OQ7D",
+        "W7478-D8IM6-KK31N-0R68U-3VPB5",
+        "2LYM8-58240-A8MK2-6GRQ8-16583",
+        "836HP-IU3XK-D684L-HVDVY-21V13",
+        "UG07C-GOKV2-GDI8I-N416P-A0QRG",
+        "V0F01-W6188-24GQ5-6UQ5K-ON81A",
+        "X0L26-UHG1D-77CK1-3IQ4X-N6M26",
+        "AJ1K8-O75IN-D8Y2V-D21WK-6P5IH",
+        "1W551-CCGP6-KVL08-VB738-3W420",
+        "612S7-S8PBM-X143Y-S28X8-GV4S8",
+        "5A422-6E2EW-7N642-36YW7-YWWVQ",
+        "OWK4A-2363P-3QCDE-L2UGS-AUQVL",
+        "1UQ2X-B46K7-LR6R1-177K5-3DCLL",
+        "0MV81-3ES7H-WQ6WS-1C3X6-UF03K",
+        "HEKX7-OY862-2Y3DL-K41IC-U46BH",
+        "05OND-UFS8L-136Q7-708P3-7E073",
+        "57DJP-C21R6-66TI3-13Y4Q-HLKC2",
+        "PS0C6-YENYG-FLE74-5U42Q-K4LP3",
+        "QFD46-TJOF0-TP771-3XTR6-S3Q72",
+        "P57GW-6SGR5-625B7-4V4L5-H0NW8",
+        "BRI3B-X6VMT-3RTM7-H683S-U7617",
+        "5WS0Y-VPK4W-OR0L3-Q85TP-2P73V",
+        "JYUV0-U5SA8-027RW-AHCGK-MNFJ8",
+        "25KBQ-53LQ6-CY4SD-V30DF-3136D",
+        "37553-1EGNH-0WVI2-038HM-434JB",
+        "V6B7V-U54W0-44YRE-M1126-E2VT2",
+        "0368N-L2TPO-2468D-CW7Q8-5447N",
+        "4WR0H-73HAC-5EF48-MP4NB-1VRC0",
+        "4Q0YO-07DV7-PJ83V-47BF8-21587",
+        "Y5Y76-RP6BR-VXH14-36K1L-48068",
+        "P4PE2-8084R-K10MT-O0F5E-O31CO",
+        "TTQ6A-YV36G-4DVD8-DTC35-X4088",
+        "SDH5R-EB537-E332T-2DCDO-DSIUK",
+        "P25Q2-T417B-5U53W-R0513-1W7I6",
+        "0OQE8-540VG-L1Y58-UG6VC-AIEIP",
+        "Y2G13-F1H61-Y8WW2-44A15-7MMMJ",
+        "Y2S7S-I11UR-C26GS-IF78X-X40V3",
+        "C75L0-65XM0-64B4O-1F0Q1-4C64N",
+        "TWN34-0ME6T-2533N-58U21-20525",
+        "1YO02-Y5WR3-6PXFO-1VP51-45K46",
+        "723PK-7QJE3-VAN25-0LA28-WBDT7",
+        "S3204-CU773-86R42-JHJMP-03L8I",
+        "DX53R-311RD-DR05T-MWC41-5X604",
+        "Y4S1R-SEQO8-JACRY-848N4-W1I5K",
+        "Y6J36-20568-DNF8C-IMLVE-0O2V0",
+        "NYGAF-138O8-81NTP-5356Q-1RPD4",
+        "TO53L-A71IY-43L0K-TVEC3-6J0I3",
+        "LE683-R016S-72662-XKB4V-GP2CV",
+        "1U635-LD662-Y2I27-3HR3X-26I3H",
+        "74Y40-I57P3-2C1CQ-4FOH5-O600M",
+        "32VMI-B71PA-6DQIU-561NH-2L721",
+        "YNSMK-N63G2-6SM10-4O8Y7-KHITQ",
+        "TI34F-D787N-Q8T04-SMY85-TJF2O",
+        "7H156-7VCGM-E25GC-0B8DD-I64XO",
+        "MDI14-3FR50-J0Q4T-7D3D3-K2H62",
+        "87W26-HI238-BTC18-6I642-I3SXQ",
+        "K421V-1Q613-225I0-MA1GX-5HAD1",
+        "4E8B5-J15DH-72B2J-86K11-577G3",
+        "3V8KQ-OM05M-01M12-YQ7BY-N8QD7",
+        "1RO3B-JEHM5-Q71E5-6KKJY-BCNR3",
+        "K7YXX-04UGP-8E1LJ-K2U0Q-3MM56",
+        "8A4SX-8E00A-ML433-EE4U3-PG5R5",
+        "0427C-B3420-QS02K-T31H6-3I114",
+        "CG6T2-ROQ3O-00NC3-4XKBE-W5P30",
+        "7VE34-OF54O-W1T8O-85368-B65L8",
+        "B8NT8-4VGWC-4878E-T0Q62-AN3G1",
+        "163EV-L11G5-58785-T2VWC-8I4M2",
+        "2D1Q4-TWANL-242GA-57M55-7048K",
+        "24T68-8J8YS-GM8BY-J05X6-R5FPU",
+        "GBLC0-E3I8F-P1SIM-3A3CI-MH554",
+        "0QDYB-38K83-6S1OV-CB1SQ-0S3A5",
+        "WI1DV-V735N-1K04U-FC8YR-VJGKJ",
+        "U2E8Q-62QSD-O50MV-KL741-L0IPY",
+        "00O05-86KJN-GA13N-Q254D-C3767",
+        "VWP4L-8O4RP-Y26JI-5552A-2141M",
+        "08HO8-55000-D5R81-6H00V-74X25"
+    ],
+    "OsNames" : [
+        "Windows 10",
+        "Windows 11",
+        "Windows 8",
+        "Windows 7",
+        "Windows 10 Pro",
+        "Windows 11 Pro",
+        "Windows 8 Pro",
+        "Windows 7 Pro",
+        "Windows 10 Home",
+        "Windows 11 Home",
+        "Windows 8 Home",
+        "Windows 7 Home",
+        "Windows 10 Professional",
+        "Windows 11 Professional",
+        "Windows 8 Professional",
+        "Windows 7 Professional"
+    ],
+    "MotherBoards" : [
+        "GIGABYTE B550 AORUS ELITE V2",
+        "MSI MPG B550 GAMING PLUS",
+        "GIGABYTE H410M H V2",
+        "GIGABYTE Z790 AORUS ELITE AX",
+        "GIGABYTE B660M GAMING X",
+        "GIGABYTE Z690 GAMING X",
+        "GIGABYTE H470M K",
+        "GIGABYTE H610M H",
+        "GIGABYTE H510M H",
+        "GIGABYTE B660M D3H",
+        "GIGABYTE Z690 AORUS ELITE AX",
+        "MSI B550M PRO-VDH WIFI"
+    ]
+}

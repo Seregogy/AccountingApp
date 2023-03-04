@@ -34,17 +34,17 @@
                     </Button>
 
                     <TextBlock Text="{x:Bind AccountingItem.AccountingCard.ShortName}" HorizontalAlignment="Left" Margin="70, 15" FontSize="25" FontWeight="Bold" VerticalAlignment="Top"/>
-                    <TextBlock Text="{x:Bind AccountingItem.AccountingCard.CardID}" HorizontalAlignment="Left" Margin="70, 50" FontSize="15" FontWeight="Light" VerticalAlignment="Top"/>
+                    <TextBlock Text="{x:Bind AccountingItem.AccountingCard.CardID}" HorizontalAlignment="Left" Margin="70, 50" FontSize="20" FontWeight="Light" VerticalAlignment="Top"/>
 
                     <NavigationViewItemSeparator VerticalAlignment="Top" Margin="0, 75"/>
 
                     <StackPanel VerticalAlignment="Bottom" Margin="10" Spacing="5">
-                        <tag:Tag TagName="SubsectionID"  Key="{x:Bind AccountingItem.AccountingCard.SubsectionID}"/>
+                        <tag:Tag TagName="Подразделение"  Key="{x:Bind AccountingItem.AccountingCard.SubsectionID}"/>
                         <tag:Tag TagName="PcID"  Key="{x:Bind AccountingItem.AccountingCard.PcCID}"/>
-                        <tag:Tag TagName="OrgtechID"  Key="{x:Bind AccountingItem.AccountingCard.OrgtechID}"/>
-                        <tag:Tag TagName="FrameID"  Key="{x:Bind AccountingItem.AccountingCard.FrameID}"/>
-                        <tag:Tag TagName="FloorID"  Key="{x:Bind AccountingItem.AccountingCard.FloorID}"/>
-                        <tag:Tag TagName="Date"  Key="{x:Bind AccountingItem.AccountingCard.Date}"/>
+                        <tag:Tag TagName="Оргтех."  Key="{x:Bind AccountingItem.AccountingCard.OrgtechID}"/>
+                        <tag:Tag TagName="Корпус"  Key="{x:Bind AccountingItem.AccountingCard.FrameID}"/>
+                        <tag:Tag TagName="Этаж"  Key="{x:Bind AccountingItem.AccountingCard.FloorID}"/>
+                        <tag:Tag TagName="Дата регистрации"  Key="{x:Bind AccountingItem.AccountingCard.Date}"/>
                     </StackPanel>
                 </Grid>
 
@@ -70,21 +70,49 @@
 
             <Grid Grid.Row="1" Height="500">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="400"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Grid Margin="0, 0, 5, 0" CornerRadius="15" Background="{StaticResource CustomAcrylicInAppLuminosity}">
-                    
+                <Grid Margin="0, 0, 5, 0" CornerRadius="10" Background="{StaticResource CustomAcrylicInAppLuminosity}">
+                    <StackPanel>
+                        <TextBlock Text="{x:Bind AccountingItem.EmployeeData.SecoundName}" Margin="20, 10" FontWeight="Bold" FontSize="30"/>
+
+                        <StackPanel Orientation="Horizontal" Margin="20, -20, 0, 0" Spacing="5">
+                            <TextBlock Text="{x:Bind AccountingItem.EmployeeData.FirstName}" FontSize="25" FontWeight="Light"/>
+                            <TextBlock Text="{x:Bind AccountingItem.EmployeeData.LastName}" FontSize="25" FontWeight="Light"/>
+                        </StackPanel>
+
+                        <NavigationViewItemSeparator/>
+
+                        <StackPanel Margin="15" Spacing="5">
+                            <tag:Tag TagName="Должность " Key="{x:Bind AccountingItem.EmployeeData.Post}"/>
+                            <tag:Tag TagName="Статус " Key="{x:Bind AccountingItem.EmployeeData.Status}"/>
+                            <tag:Tag TagName="ID " Key="{x:Bind AccountingItem.EmployeeData.TabNumber}"/>
+                            <tag:Tag TagName="Корпус / этаж " Key="{x:Bind AccountingItem.EmployeeData.FullCampusName}"/>
+                            <tag:Tag TagName="Номер " Key="{x:Bind AccountingItem.EmployeeData.LastPointNumber}"/>
+                        </StackPanel>
+                    </StackPanel>
                 </Grid>
 
                 <Grid Margin="5, 0, 0, 0" Grid.Column="1" CornerRadius="10" Background="{StaticResource CustomAcrylicInAppLuminosity}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel>
+                        <TextBlock Text="{x:Bind AccountingItem.PcData.OtherData.OsName}" Margin="20, 10" FontWeight="Bold" FontSize="30"/>
 
+                        <StackPanel Orientation="Horizontal" Margin="20, -20, 0, 0" Spacing="5">
+                            <TextBlock Text="{x:Bind AccountingItem.PcData.OtherData.IpAdress}" FontSize="25" FontWeight="Light"/>
+                        </StackPanel>
+                        <NavigationViewItemSeparator/>
+                    </StackPanel>
                 </Grid>
             </Grid>
 
-            <Grid CornerRadius="10" Background="{StaticResource CustomAcrylicInAppLuminosity}" Height="300">
-
+            <Grid CornerRadius="10" Background="{StaticResource CustomAcrylicInAppLuminosity}" Height="160">
+            
                 
             </Grid>
         </StackPanel>

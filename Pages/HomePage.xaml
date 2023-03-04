@@ -10,7 +10,8 @@
 
     <Grid>
         <TextBlock Text="List of accounting items" FontSize="40" HorizontalAlignment="Center" Margin="20" FontWeight="Bold" x:Name="ListText"/>
-        
+        <NavigationViewItemSeparator VerticalAlignment="Top" Margin="0, 85, 0, 0"/>
+
         <ScrollViewer Margin="50, 100, 10, 30">
             <GridView SelectionMode="None" x:Name="ListOfItems">
             </GridView>

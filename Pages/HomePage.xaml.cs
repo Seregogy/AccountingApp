@@ -1,6 +1,10 @@
-﻿using AccountingApp.Data.ConcreteData;
+﻿using AccountingApp.Data.BlankData;
+using AccountingApp.Data.ConcreteData;
 using AccountingApp.PresentationData;
+using System;
 using System.Collections.Generic;
+using System.IO;
+using Windows.ApplicationModel.DataTransfer;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
@@ -18,6 +22,48 @@ namespace AccountingApp.Pages
 
             ListOfItems.Loaded += (x, y) =>
             {
+                ProcessorData processorData = new ProcessorData();
+                processorData.IsGraphicsExists = true;
+                processorData.ProcessorSocket = "AM4";
+                processorData.ProcessorName = "AMD Ryzen 5 3600";
+
+                GraphicsData graphicsData = new GraphicsData() 
+                { 
+                    GraphicsCardName = "AMD Radeon RX 5700XT",
+                    Interfaces = "HDMI/DisplayPort",
+                    Frequency = "1900 Mhz",
+                    ProcessorsCount = 2500
+                };
+
+                string strObject = Newtonsoft.Json.JsonConvert.SerializeObject(graphicsData, Newtonsoft.Json.Formatting.Indented);
+
+                try
+                {
+                    if (File.Exists(Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "Bundles.json")))
+                    {
+                        DataPackage dataPackage = new DataPackage();
+                        dataPackage.SetText(Windows.Storage.ApplicationData.Current.LocalFolder.Path);
+                        Clipboard.SetContent(dataPackage);
+                    }
+                    else
+                    {
+                        File.CreateText(Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "Bundles.json"));
+                        DataPackage dataPackage = new DataPackage();
+                        dataPackage.SetText(Windows.Storage.ApplicationData.Current.LocalFolder.Path);
+                        Clipboard.SetContent(dataPackage);
+                    }
+
+                    File.WriteAllText(Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "Bundles.json"), strObject);
+                }
+                catch (Exception ex)
+                {
+                    ContentDialog contentDialog = new ContentDialog();
+                    contentDialog.Content = ex.StackTrace;
+                    contentDialog.Title = ex.Message;
+                    contentDialog.PrimaryButtonText = "OK";
+                    contentDialog.ShowAsync();
+                }
+
                 navObj = ListText;
 
                 EmployeeData sergey = new EmployeeData()
@@ -53,7 +99,7 @@ namespace AccountingApp.Pages
                 {
                     Accounting = new Data.AccountingItemData()
                     {
-                        AccountingCard = new Data.ConcreteData.AccountingCard()
+                        AccountingCard = new AccountingCard()
                         {
                             CardID = 10213,
                             FloorID = 1231241,
@@ -72,7 +118,7 @@ namespace AccountingApp.Pages
                 {
                     Accounting = new Data.AccountingItemData()
                     {
-                        AccountingCard = new Data.ConcreteData.AccountingCard()
+                        AccountingCard = new AccountingCard()
                         {
                             CardID = 1468,
                             FloorID = 1231577,
@@ -90,7 +136,7 @@ namespace AccountingApp.Pages
                 {
                     Accounting = new Data.AccountingItemData()
                     {
-                        AccountingCard = new Data.ConcreteData.AccountingCard()
+                        AccountingCard = new AccountingCard()
                         {
                             CardID = 126787,
                             FloorID = 8796,
@@ -108,7 +154,7 @@ namespace AccountingApp.Pages
                 {
                     Accounting = new Data.AccountingItemData()
                     {
-                        AccountingCard = new Data.ConcreteData.AccountingCard()
+                        AccountingCard = new AccountingCard()
                         {
                             CardID = 789,
                             FloorID = 4564,
@@ -126,7 +172,7 @@ namespace AccountingApp.Pages
                 {
                     Accounting = new Data.AccountingItemData()
                     {
-                        AccountingCard = new Data.ConcreteData.AccountingCard()
+                        AccountingCard = new AccountingCard()
                         {
                             CardID = 8764,
                             FloorID = 767313,

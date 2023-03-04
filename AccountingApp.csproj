@@ -120,8 +120,13 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Data\AccountingItemData.cs" />
+    <Compile Include="Data\BlankData\ComputerType.cs" />
+    <Compile Include="Data\BlankData\GraphicsData.cs" />
+    <Compile Include="Data\BlankData\OtherData.cs" />
+    <Compile Include="Data\BlankData\ProcessorData.cs" />
     <Compile Include="Data\ConcreteData\AccountingCard.cs" />
     <Compile Include="Data\ConcreteData\EmployeeData.cs" />
+    <Compile Include="Data\ConcreteData\PCData.cs" />
     <Compile Include="Data\GlobalData.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -188,11 +193,23 @@
     <PackageReference Include="Microsoft.UI.Xaml">
       <Version>2.8.2</Version>
     </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.2</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="DataBase\DataBase.json" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties database_4database_1json__JsonSchema="https://appsemble.app/api.json" />
+    </VisualStudio>
+  </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
