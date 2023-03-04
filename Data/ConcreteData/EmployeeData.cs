@@ -25,5 +25,6 @@
         public int LastPointNumber { get => lastPointNumber; set => lastPointNumber = value; }
 
         public string FullCampusName { get => $"Офис {CampusName}, этаж {Floor}"; }
+        public string FullName { get => $"{SecoundName} {FirstName} {LastName}"; }
     }
 }

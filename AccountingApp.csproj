@@ -143,6 +143,9 @@
     <Compile Include="PresentationData\AccountingCardElement.xaml.cs">
       <DependentUpon>AccountingCardElement.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PresentationData\HistoryElement.xaml.cs">
+      <DependentUpon>HistoryElement.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -182,6 +185,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PresentationData\AccountingCardElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PresentationData\HistoryElement.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

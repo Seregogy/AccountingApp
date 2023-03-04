@@ -605,6 +605,13 @@
         "GIGABYTE H510M H",
         "GIGABYTE B660M D3H",
         "GIGABYTE Z690 AORUS ELITE AX",
-        "MSI B550M PRO-VDH WIFI"
+        "MSI B550M PRO-VDH WIFI",
+        "GIGABYTE B660 DS3H AX"
+    ],
+    "HDDs" : [
+        "WD Blue 1TB",
+        "Seagate Baraccuda 1TB",
+        "WD Gold 5TB",
+        "Seagate Baraccuda 2TB"
     ]
 }

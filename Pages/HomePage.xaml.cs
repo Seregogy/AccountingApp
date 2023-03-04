@@ -4,6 +4,7 @@ using AccountingApp.PresentationData;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Xml.Linq;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -22,6 +23,38 @@ namespace AccountingApp.Pages
 
             ListOfItems.Loaded += (x, y) =>
             {
+                PCData pcData = new PCData()
+                {
+                    GraphicsData = new GraphicsData()
+                    {
+                        Frequency = "1900 MHz",
+                        GraphicsCardName = "RX 5700 XT",
+                        Interfaces = "HDMI/DisplayPort",
+                        ProcessorsCount = 2560,
+                        VideoMemory = 8
+                    },
+                    OtherData = new OtherData()
+                    {
+                        UserName = "RePti-LoiD",
+                        ActivationKey = "06O6X-84T2U-YM6B6-5WTOT-60378",
+                        OsName = "Windows 11 Pro",
+                        ComputerType = ComputerType.Компьютер,
+                        IpAdress = "15.198.55.120",
+                        IsActivated = true,
+                        MotherBoard = "GIGABYTE H510M H",
+                        PcID = "43547",
+                        RamCount = 2,
+                        RamSize = 16
+                    },
+                    ProcessorData = new ProcessorData()
+                    {
+                        IsGraphicsExists = false,
+                        ProcessorName = "AMD Ryzen 5 3600",
+                        ProcessorSocket = "AM4"
+                    }
+                };
+
+
                 ProcessorData processorData = new ProcessorData();
                 processorData.IsGraphicsExists = true;
                 processorData.ProcessorSocket = "AM4";
@@ -109,7 +142,8 @@ namespace AccountingApp.Pages
                             PcCID = 4234,
                             ShortName = "AMD Ryzen"
                         },
-                        EmployeeData = sergey
+                        EmployeeData = sergey,
+                        PcData = pcData
                     }
                 });
 
@@ -128,7 +162,8 @@ namespace AccountingApp.Pages
                             PcCID = 7898,
                             ShortName = "Amd Threadreaper"
                         },
-                        EmployeeData = valery
+                        EmployeeData = valery,
+                        PcData = pcData
                     }
                 });
 
@@ -146,7 +181,8 @@ namespace AccountingApp.Pages
                             PcCID = 78979,
                             ShortName = "AMD Epic"
                         },
-                        EmployeeData = sergey
+                        EmployeeData = sergey,
+                        PcData = pcData
                     }
                 });
 
@@ -164,7 +200,8 @@ namespace AccountingApp.Pages
                             PcCID = 786576,
                             ShortName = "AMD Radeon"
                         },
-                        EmployeeData = valery
+                        EmployeeData = valery,
+                        PcData = pcData
                     }
                 });
 
@@ -182,7 +219,8 @@ namespace AccountingApp.Pages
                             PcCID = 12312,
                             ShortName = "AMD RX"
                         },
-                        EmployeeData = valery
+                        EmployeeData = valery,
+                        PcData = pcData
                     }
                 });
 
