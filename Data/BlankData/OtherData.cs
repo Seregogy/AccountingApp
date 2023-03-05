@@ -11,6 +11,7 @@
 
         private int ramSize;
         private int ramCount;
+        private string hdd;
 
         private string motherBoard;
         private string osName;
@@ -29,5 +30,6 @@
         public string ComputerNameOs { get => $"Компьютер / {userName}"; }
         public int RamSize { get => ramSize; set => ramSize = value; }
         public int RamCount { get => ramCount; set => ramCount = value; }
+        public string Hdd { get => hdd; set => hdd = value; }
     }
 }

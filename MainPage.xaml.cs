@@ -13,22 +13,9 @@ namespace AccountingApp
             Loaded += (x, y) => Instance = this;
         }
 
-        private string currentPageName;
         private static MainPage mainPage;
 
-        public Page currentPage;
-
         public static MainPage Instance { get => mainPage; private set => mainPage = value; }
-
-        public string CurrentPageName
-        {
-            get => currentPageName;
-            private set
-            {
-                currentPageName = value;
-                MainNav.PaneTitle = value;
-            }
-        }
 
         private void Main_SelectionChanged(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs args)
         {
@@ -48,7 +35,6 @@ namespace AccountingApp
             string type = $"{nameof(AccountingApp)}.{nameof(Pages)}.{name}";
 
             MainFrame.Navigate(Type.GetType(type), data, new DrillInNavigationTransitionInfo());
-            MainNav.PaneTitle = name;
         }
     }
 }

@@ -10,13 +10,6 @@
     media:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
-        <media:NavigationView x:Name="MainNav" SelectionChanged="Main_SelectionChanged">
-            <media:NavigationView.MenuItems>
-                <media:NavigationViewItem Content="Home" Icon="Home"/>
-                <media:NavigationViewItem Content="List" Icon="List"/>
-            </media:NavigationView.MenuItems>
-
-            <Frame x:Name="MainFrame" Tag="HomePage" Loaded="MainFrame_Loaded"/>
-        </media:NavigationView>
+        <Frame x:Name="MainFrame" Tag="HomePage" Loaded="MainFrame_Loaded"/>
     </Grid>
 </Page>

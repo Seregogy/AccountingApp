@@ -142,11 +142,12 @@
                         <Grid Grid.Column="2" Background="{StaticResource CustomAcrylicInAppLuminosity}" Margin="5, 10, 10, 10" CornerRadius="5">
                             <ScrollViewer>
                                 <StackPanel>
-                                    <TextBlock Text="RAM" Margin="15, 15, 0, 0" FontSize="20" FontWeight="Bold"/>
+                                    <TextBlock Text="Memory" Margin="15, 15, 0, 0" FontSize="20" FontWeight="Bold"/>
                                     <NavigationViewItemSeparator/>
                                     <StackPanel Margin="15, 0, 15, 15" Spacing="5">
                                         <tag:Tag TagName="Оперативная память (ГБ) " Key="{x:Bind AccountingItem.PcData.OtherData.RamSize}"/>
                                         <tag:Tag TagName="Кол-во планок памяти " Key="{x:Bind AccountingItem.PcData.OtherData.RamCount}"/>
+                                        <tag:Tag TagName="Жёсткий диск " Key="{x:Bind AccountingItem.PcData.OtherData.Hdd}"/>
                                     </StackPanel>
 
                                     <StackPanel>
