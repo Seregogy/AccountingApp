@@ -13,7 +13,7 @@
             <Border Padding="4" Background="#7F1E1E1E" CornerRadius="5">
                 <TextBlock Text="{x:Bind TagName}" Foreground="#E4E8E8E8" VerticalAlignment="Center"/>
             </Border>
-            <TextBlock Text="{x:Bind Key}" Margin="7, 0, 0, 0" TextWrapping="Wrap" Foreground="#E4E8E8E8" VerticalAlignment="Center"/>
+            <TextBox Text="{x:Bind Key}" Margin="7, 0, 0, 0" Foreground="#E4E8E8E8" IsReadOnly="True" VerticalAlignment="Center" CornerRadius="5" x:Name="EditBox" LostFocus="EditBox_LostFocus"/>
         </StackPanel>
     </Grid>
 </UserControl>

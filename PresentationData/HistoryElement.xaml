@@ -17,13 +17,17 @@
         </controls:Expander.Header>
 
         <controls:Expander.Content>
-            <StackPanel HorizontalAlignment="Left" Spacing="5">
-                <tag:Tag TagName="ID компьютера " Key="{x:Bind ItemData.PcData.OtherData.PcID}"/>
-                <tag:Tag TagName="Подразделение " Key="{x:Bind ItemData.EmployeeData.CampusName}"/>
-                <tag:Tag TagName="ФИО ответственного " Key="{x:Bind ItemData.EmployeeData.FullName}"/>
-                <tag:Tag TagName="Назв/номер корпуса " Key="{x:Bind ItemData.EmployeeData.FullCampusName}"/>
-                <tag:Tag TagName="Номер телефона " Key="{x:Bind ItemData.EmployeeData.LastPointNumber}"/>
-                <tag:Tag TagName="Дата (изменить) " Key="{x:Bind ItemData.AccountingCard.Date}"/>
+            <StackPanel>
+                <TextBlock Text="Изменено" Margin="15, 0, 0, 0" FontSize="20" FontWeight="Bold"/>
+                <NavigationViewItemSeparator/>
+
+                <StackPanel HorizontalAlignment="Left" Spacing="5" Margin="15, 0, 0, 0">
+                    <tag:Tag TagName="ID компьютера " Key="{x:Bind HistoryID}"/>
+                    <tag:Tag TagName="Подразделение " Key="{x:Bind ItemData.CampusName}"/>
+                    <tag:Tag TagName="ФИО ответственного " Key="{x:Bind ItemData.FullName}"/>
+                    <tag:Tag TagName="Назв/номер корпуса " Key="{x:Bind ItemData.FullCampusName}"/>
+                    <tag:Tag TagName="Номер телефона " Key="{x:Bind ItemData.LastPointNumber}"/>
+                </StackPanel>
             </StackPanel>
         </controls:Expander.Content>
     </controls:Expander>

@@ -1,11 +1,6 @@
-﻿using AccountingApp.Data.BlankData;
-using AccountingApp.Data.ConcreteData;
-using AccountingApp.PresentationData;
-using System;
+﻿using AccountingApp.DataBase;
 using System.Collections.Generic;
 using System.IO;
-using Windows.ApplicationModel.DataTransfer;
-using Windows.UI.Xaml.Controls;
 
 namespace AccountingApp.Data
 {
@@ -27,6 +22,16 @@ namespace AccountingApp.Data
 
         public static List<AccountingItemData> GenerateDataBase()
         {
+            DataBaseHandler.InitDataBaseHandler();
+            #region
+            /*
+            
+            List<string> history = new List<string>();
+            history.Add("Тест (поступление техники) от ASPack");
+            history.Add("Тест перенаправление техники в (хз)");
+            history.Add("Тест ещё тестик");
+            history.Add("Тест перевод на нового ответсвенного");
+
             PCData pcData = new PCData()
             {
                 GraphicsData = new GraphicsData()
@@ -117,7 +122,8 @@ namespace AccountingApp.Data
                         ShortName = "AMD Ryzen"
                     },
                     EmployeeData = sergey,
-                    PcData = pcData
+                    PcData = pcData,
+                    HistoryElement = history
                 }
             });
 
@@ -137,7 +143,8 @@ namespace AccountingApp.Data
                         ShortName = "Amd Threadreaper"
                     },
                     EmployeeData = valery,
-                    PcData = pcData
+                    PcData = pcData,
+                    HistoryElement = history
                 }
             });
 
@@ -228,9 +235,20 @@ namespace AccountingApp.Data
                 contentDialog.Title = ex.Message;
                 contentDialog.PrimaryButtonText = "OK";
                 contentDialog.ShowAsync();
-            }
+            }*/
+
+            #endregion
+
+            LoadDB();
 
             return accountingItemData;
         }
+
+        public static void LoadDB()
+        {
+            AccountingItemData = Newtonsoft.Json.JsonConvert.DeserializeObject<List<AccountingItemData>>(File.ReadAllText(Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "Bundles.json")));
+        }
+
+        public static void SaveDB() => File.WriteAllText(Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "Bundles.json"), Newtonsoft.Json.JsonConvert.SerializeObject(AccountingItemData, Newtonsoft.Json.Formatting.Indented));
     }
 }

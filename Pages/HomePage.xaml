@@ -12,6 +12,15 @@
         <TextBlock Text="List of accounting items" FontSize="40" HorizontalAlignment="Center" Margin="20" FontWeight="Bold" x:Name="ListText"/>
         <NavigationViewItemSeparator VerticalAlignment="Top" Margin="0, 85, 0, 0"/>
 
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <Button Width="50" Height="50" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="15" Click="UpdatePage">
+                <FontIcon Glyph="&#xE777;" FontSize="25"/>
+            </Button>
+            <Button Width="50" Height="50" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="15" Click="LaunchEditPage">
+                <FontIcon Glyph="&#xE948;" FontSize="25"/>
+            </Button>
+        </StackPanel>
+
         <ScrollViewer Margin="50, 100, 10, 30">
             <GridView SelectionMode="None" x:Name="ListOfItems"/>
         </ScrollViewer>

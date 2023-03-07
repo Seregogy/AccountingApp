@@ -1,0 +1,184 @@
+﻿<Page
+    x:Class="AccountingApp.Pages.AccountingElementEditPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AccountingApp.Pages"
+    xmlns:media="using:Microsoft.UI.Xaml.Media"
+    xmlns:history="using:AccountingApp.PresentationData"
+    xmlns:tag="using:AccountingApp.Other"
+    xmlns:tool="using:AccountingApp.Tools"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <media:AcrylicBrush x:Key="CustomAcrylicInAppLuminosity" TintOpacity="0.1" TintLuminosityOpacity="0.2" TintColor="SkyBlue" FallbackColor="SkyBlue" />
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <ScrollViewer>
+        <StackPanel Spacing="10" Padding="10">
+
+            <Grid Grid.Row="1" Height="300">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="500"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Margin="0, 0, 5, 0" CornerRadius="10" Background="{StaticResource CustomAcrylicInAppLuminosity}" x:Name="CardDataBlock">
+                    <Button VerticalAlignment="Top" HorizontalAlignment="Left" Width="50" Height="50" Margin="5" CornerRadius="5" Click="ReturnToMain">
+                        <FontIcon Glyph="&#xE72B;"/>
+                    </Button>
+
+                    <TextBox HorizontalAlignment="Left" Margin="70, 15" FontSize="15" FontWeight="Bold" VerticalAlignment="Top" LostFocus="CardNameLostFocus"/>
+                    <TextBlock x:Name="CardID" HorizontalAlignment="Left" Margin="70, 55" FontSize="18" FontWeight="Light" VerticalAlignment="Top"/>
+
+                    <NavigationViewItemSeparator VerticalAlignment="Top" Margin="0, 75"/>
+
+                    <StackPanel VerticalAlignment="Bottom" Margin="15" Spacing="5">
+                        <tag:Tag TagName="Подразделение"  x:Name="Sect"/>
+                        <tag:Tag TagName="PcID"  x:Name="pcId"/>
+                        <tag:Tag TagName="Оргтех."  x:Name="orgT"/>
+                        <tag:Tag TagName="Корпус" x:Name="frame"/>
+                        <tag:Tag TagName="Этаж" x:Name="floor"/>
+                        <tag:Tag TagName="Дата регистрации"  x:Name="date"/>
+                    </StackPanel>
+                </Grid>
+
+                <StackPanel Margin="5, 0, 0, 0" Orientation="Vertical" Grid.Column="1" CornerRadius="10" Background="{StaticResource CustomAcrylicInAppLuminosity}">
+                    <TextBox Margin="20, 10" FontWeight="Bold" FontSize="20" LostFocus="NameChange"/>
+
+                    <StackPanel Orientation="Horizontal" Margin="20, -5, 0, 0" Spacing="5">
+                        <TextBox FontSize="18" FontWeight="Light" LostFocus="FNameChange"/>
+                        <TextBox FontSize="18" FontWeight="Light" LostFocus="LNameChange"/>
+                    </StackPanel>
+
+                    <NavigationViewItemSeparator/>
+
+                    <StackPanel Margin="15" Spacing="5" VerticalAlignment="Bottom">
+                        <tag:Tag TagName="Должность " IsReadOnlyTag="False" OnKeyChanged="PostChaned"/>
+                        <tag:Tag TagName="Статус " IsReadOnlyTag="False" OnKeyChanged="StatusChange"/>
+                        <tag:Tag TagName="ID " x:Name="EmpID"/>
+                        <tag:Tag TagName="Корпус / этаж " IsReadOnlyTag="False" OnKeyChanged="FloorChange"/>
+                        <tag:Tag TagName="Номер " IsReadOnlyTag="False" OnKeyChanged="FrameNumChange"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="1" Height="500">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="400"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Margin="0, 0, 5, 0" CornerRadius="10" Background="{StaticResource CustomAcrylicInAppLuminosity}">
+                    <StackPanel>
+                        <TextBlock Text="History" Margin="15, 15, 0, 0" FontSize="20" FontWeight="Bold"/>
+                        <NavigationViewItemSeparator/>
+                    </StackPanel>
+
+                    <Grid Margin="0, 60, 0, 5">
+                        <ScrollViewer>
+                            <StackPanel HorizontalAlignment="Center" Margin="15" x:Name="HistoryList" Spacing="5"/>
+
+                        </ScrollViewer>
+                    </Grid>
+                </Grid>
+
+                <Grid Margin="5, 0, 0, 0" Grid.Column="1" CornerRadius="10" Background="{StaticResource CustomAcrylicInAppLuminosity}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel>
+                        <TextBlock Text="Edit PC" Margin="20, 10" FontWeight="Bold" FontSize="30" x:Name="EditPC"/>
+                        <NavigationViewItemSeparator/>
+                    </StackPanel>
+
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0" Background="{StaticResource CustomAcrylicInAppLuminosity}" Margin="10, 10, 5, 10" CornerRadius="5">
+                            <ScrollViewer>
+                                <StackPanel>
+                                    <TextBlock Text="Graphics" Margin="15, 15, 0, 0" FontSize="20" FontWeight="Bold"/>
+                                    <NavigationViewItemSeparator/>
+
+                                    <StackPanel Spacing="5" Margin="15, 0, 15, 15">
+                                        <ComboBox Header="Видеокарта " x:Name="GraphicsSelect" SelectionChanged="GraphicsSelect_SelectionChanged"/>
+                                        <tag:Tag TagName="Порты подключения " x:Name="Ports"/>
+                                        <tag:Tag TagName="Частота чипа (МГц) " x:Name="FreqCard"/>
+                                        <tag:Tag TagName="Кол-во процессоров " x:Name="ProcCount"/>
+                                        <tag:Tag TagName="Видеопамять (ГБ) " x:Name="VideoMemory"/>
+                                    </StackPanel>
+
+                                    <StackPanel>
+                                        <TextBlock Text="Processor" Margin="15, 15, 0, 0" FontSize="20" FontWeight="Bold"/>
+                                        <NavigationViewItemSeparator/>
+
+                                        <StackPanel Margin="15, 0, 15, 15" Spacing="5">
+                                            <ComboBox Header="Процессор " x:Name="ProcessorSelect" SelectionChanged="ProcessorSelect_SelectionChanged"/>
+                                            <tag:Tag TagName="Сокет процессора " x:Name="Socket"/>
+                                            <tag:Tag TagName="Встроенное видеоядро " x:Name="VideoCore"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </Grid>
+
+                        <Grid Grid.Column="2" Background="{StaticResource CustomAcrylicInAppLuminosity}" Margin="5, 10, 10, 10" CornerRadius="5">
+                            <ScrollViewer>
+                                <StackPanel>
+                                    <TextBlock Text="Memory" Margin="15, 15, 0, 0" FontSize="20" FontWeight="Bold"/>
+                                    <NavigationViewItemSeparator/>
+                                    <StackPanel Margin="15, 0, 15, 15" Spacing="5">
+                                        <tag:Tag TagName="Оперативная память (ГБ) " IsReadOnlyTag="False" OnKeyChanged="RAMOnKeyChanged"/>
+                                        <tag:Tag TagName="Кол-во планок памяти " IsReadOnlyTag="False" OnKeyChanged="RAMCountOnKeyChanged"/>
+                                        <ComboBox Header="Жёсткий диск " x:Name="HddSelect" SelectionChanged="HddSelect_SelectionChanged"/>
+                                    </StackPanel>
+
+                                    <StackPanel>
+                                        <TextBlock Text="MotherBoard" Margin="15, 15, 0, 0" FontSize="20" FontWeight="Bold"/>
+                                        <NavigationViewItemSeparator/>
+
+                                        <ComboBox Header="Материнская плата " x:Name="MotherBoardSelect" Margin="15, 0, 15, 15"/>
+                                    </StackPanel>
+
+                                    <StackPanel>
+                                        <TextBlock Text="Adminstrating" Margin="15, 15, 0, 0" FontSize="20" FontWeight="Bold"/>
+                                        <NavigationViewItemSeparator/>
+                                        <StackPanel Spacing="5" Margin="15, 15, 0, 15">
+                                            <ComboBox Header="Тип оборудования " x:Name="TypeSelect">
+                                                <x:String>Планшет</x:String>
+                                                <x:String>Компьютер</x:String>
+                                                <x:String>Ноутбук</x:String>
+                                                <x:String>Моноблок</x:String>
+                                            </ComboBox>
+                                            <ComboBox Header="Операционная система " x:Name="OSSelect"/>
+                                            <tag:Tag TagName="Ip-адрес " x:Name="IpAdress" IsReadOnlyTag="False"/>
+                                            <CheckBox Content="Активация" x:Name="IsActivate"/>
+
+                                            <ComboBox Text="Ключ активации " x:Name="KeyActivate"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+
+            <Grid CornerRadius="10" Background="{StaticResource CustomAcrylicInAppLuminosity}"     Height="100">
+                <Button Content="Сохранить данные" Background="{StaticResource SystemAccentColor}" Margin="15" Click="Button_Click"/>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

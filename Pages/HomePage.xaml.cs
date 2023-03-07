@@ -1,4 +1,5 @@
 ﻿using AccountingApp.Data;
+using AccountingApp.DataBase;
 using AccountingApp.PresentationData;
 using System.Collections.Generic;
 using Windows.UI.Xaml;
@@ -18,21 +19,27 @@ namespace AccountingApp.Pages
 
             ListOfItems.Loaded += (x, y) =>
             {
-                GlobalData.InitDataBase();
-
-                List<AccountingCardElement> cards = new List<AccountingCardElement>();
-                foreach (AccountingItemData item in GlobalData.AccountingItemData)
-                {
-                    AccountingCardElement card = new AccountingCardElement();
-                    card.Accounting = item;
-
-                    card.OnCardSelected += ItemClicked;
-
-                    cards.Add(card);
-                }
-
-                ListOfItems.ItemsSource = cards;
+                LoadCards();
             };
+        }
+
+        private void LoadCards()
+        {
+            GlobalData.InitDataBase();
+            DataBaseHandler.InitDataBaseHandler();
+
+            List<AccountingCardElement> cards = new List<AccountingCardElement>();
+            foreach (AccountingItemData item in GlobalData.AccountingItemData)
+            {
+                AccountingCardElement card = new AccountingCardElement();
+                card.Accounting = item;
+
+                card.OnCardSelected += ItemClicked;
+
+                cards.Add(card);
+            }
+
+            ListOfItems.ItemsSource = cards;
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -58,6 +65,19 @@ namespace AccountingApp.Pages
             navObj = uIElement;
 
             MainPage.Instance.NavigateFrame(nameof(AccountingElementView), uIElement);
+        }
+
+        private void LaunchEditPage(object sender, RoutedEventArgs e)
+        {
+            navObj = sender as UIElement;
+
+            MainPage.Instance.NavigateFrame(nameof(AccountingElementEditPage), null);
+        }
+
+        private void UpdatePage(object sender, RoutedEventArgs e)
+        {
+            GlobalData.LoadDB();
+            LoadCards();
         }
     }
 }

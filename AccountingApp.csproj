@@ -135,6 +135,9 @@
     <Compile Include="Other\Tag.xaml.cs">
       <DependentUpon>Tag.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\AccountingElementEditPage.xaml.cs">
+      <DependentUpon>AccountingElementEditPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AccountingElementView.xaml.cs">
       <DependentUpon>AccountingElementView.xaml</DependentUpon>
     </Compile>
@@ -148,6 +151,7 @@
       <DependentUpon>HistoryElement.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\BoolConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -174,6 +178,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Other\Tag.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AccountingElementEditPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

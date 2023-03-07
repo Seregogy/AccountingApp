@@ -1,26 +1,29 @@
 ﻿using AccountingApp.Data;
+using AccountingApp.Data.ConcreteData;
 using Windows.UI.Xaml.Controls;
 
 namespace AccountingApp.PresentationData
 {
     public sealed partial class HistoryElement : UserControl
     {
-        private AccountingItemData itemData;
+        private EmployeeData itemData;
         private string shortDescription;
+        private int historyID;
 
         public HistoryElement()
         {
             InitializeComponent();
         }
 
-        public HistoryElement(AccountingItemData itemData)
+        public HistoryElement(EmployeeData itemData)
         {
             ItemData = itemData;
 
             InitializeComponent();
         }
 
-        public AccountingItemData ItemData { get => itemData; set => itemData = value; }
+        public EmployeeData ItemData { get => itemData; set => itemData = value; }
         public string ShortDescription { get => shortDescription; set => shortDescription = value; }
+        public int HistoryID { get => historyID; set => historyID = value; }
     }
 }
