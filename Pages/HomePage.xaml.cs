@@ -1,7 +1,8 @@
 ﻿using AccountingApp.Data;
-using AccountingApp.DataBase;
+using AccountingApp.Data;
 using AccountingApp.PresentationData;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
@@ -17,16 +18,16 @@ namespace AccountingApp.Pages
         {
             InitializeComponent();
 
-            ListOfItems.Loaded += (x, y) =>
+            ListOfItems.Loaded += async (x, y) =>
             {
-                LoadCards();
+                await LoadCardsAsync();
             };
         }
 
-        private void LoadCards()
+        private async Task LoadCardsAsync()
         {
-            GlobalData.InitDataBase();
-            DataBaseHandler.InitDataBaseHandler();
+            await GlobalData.InitDataBaseAsync();
+            Data.DataBase.InitDataBaseAsync();
 
             List<AccountingCardElement> cards = new List<AccountingCardElement>();
             foreach (AccountingItemData item in GlobalData.AccountingItemData)
@@ -74,10 +75,10 @@ namespace AccountingApp.Pages
             MainPage.Instance.NavigateFrame(nameof(AccountingElementEditPage), null);
         }
 
-        private void UpdatePage(object sender, RoutedEventArgs e)
+        private async void UpdatePage(object sender, RoutedEventArgs e)
         {
-            GlobalData.LoadDB();
-            LoadCards();
+            await GlobalData.LoadDBAsync();
+            await LoadCardsAsync();
         }
     }
 }

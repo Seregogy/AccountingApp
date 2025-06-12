@@ -119,7 +119,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DataBase\DataBaseHandler.cs" />
+    <Compile Include="DataBase\DataBase.cs" />
     <Compile Include="Data\AccountingItemData.cs" />
     <Compile Include="Data\BlankData\ComputerType.cs" />
     <Compile Include="Data\BlankData\GraphicsData.cs" />
@@ -128,6 +128,7 @@
     <Compile Include="Data\ConcreteData\AccountingCard.cs" />
     <Compile Include="Data\ConcreteData\EmployeeData.cs" />
     <Compile Include="Data\ConcreteData\PCData.cs" />
+    <Compile Include="Data\GlobalConst.cs" />
     <Compile Include="Data\GlobalData.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -215,7 +216,12 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="DataBase\DataBase.json" />
+    <None Include="DataBase\Bundles.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataBase\DataBase.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

@@ -1,11 +1,12 @@
 ﻿using AccountingApp.Data;
 using AccountingApp.Data.BlankData;
 using AccountingApp.Data.ConcreteData;
-using AccountingApp.DataBase;
+using AccountingApp.Data;
 using AccountingApp.Other;
 using System;
 using System.Collections.Generic;
 using Windows.UI.Xaml.Controls;
+using System.Threading.Tasks;
 
 namespace AccountingApp.Pages
 {
@@ -23,9 +24,10 @@ namespace AccountingApp.Pages
         {
             InitializeComponent();
 
-            Loaded += (x, y) =>
+            Loaded += async (x, y) =>
             {
-                Random random = new Random();
+                var random = new Random();
+                await DataBase.InitDataBaseAsync();
 
                 AccountingItem = new AccountingItemData()
                 {
@@ -63,37 +65,37 @@ namespace AccountingApp.Pages
                 EmpID.Key = accountingItem.EmployeeData.TabNumber.ToString();
 
                 List<string> graphicsCardNames = new List<string>();
-                foreach (var item in DataBaseHandler.Instance.GraphicCards)
+                foreach (var item in DataBase.Instance.GraphicCards)
                     graphicsCardNames.Add(item.GraphicsCardName);
 
                 GraphicsSelect.ItemsSource = graphicsCardNames;
 
                 List<string> procNames = new List<string>();
-                foreach (ProcessorData item in DataBaseHandler.Instance.Processors)
+                foreach (ProcessorData item in DataBase.Instance.Processors)
                     procNames.Add(item.ProcessorName);
 
                 ProcessorSelect.ItemsSource = procNames;
 
                 List<string> hddNames = new List<string>();
-                foreach (string item in DataBaseHandler.Instance.HDDs)
+                foreach (string item in DataBase.Instance.HDDs)
                     hddNames.Add(item);
 
                 HddSelect.ItemsSource = hddNames;
 
                 List<string> motherNames = new List<string>();
-                foreach (string item in DataBaseHandler.Instance.MotherBoards)
+                foreach (string item in DataBase.Instance.MotherBoards)
                     motherNames.Add(item);
 
                 MotherBoardSelect.ItemsSource = motherNames;
 
                 List<string> osNames = new List<string>();
-                foreach (string item in DataBaseHandler.Instance.OsNames)
+                foreach (string item in DataBase.Instance.OsNames)
                     osNames.Add(item);
 
                 OSSelect.ItemsSource = osNames;
 
                 List<string> keyNames = new List<string>();
-                foreach (string item in DataBaseHandler.Instance.Keys)
+                foreach (string item in DataBase.Instance.Keys)
                     keyNames.Add(item);
 
                 KeyActivate.ItemsSource = keyNames;
@@ -105,7 +107,7 @@ namespace AccountingApp.Pages
 
         private void GraphicsSelect_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            foreach (GraphicsData item in DataBaseHandler.Instance.GraphicCards)
+            foreach (GraphicsData item in Data.DataBase.Instance.GraphicCards)
             {
                 if (item.GraphicsCardName == (sender as ComboBox).SelectedValue.ToString())
                 {
@@ -121,7 +123,7 @@ namespace AccountingApp.Pages
 
         private void ProcessorSelect_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            foreach (ProcessorData item in DataBaseHandler.Instance.Processors)
+            foreach (ProcessorData item in Data.DataBase.Instance.Processors)
             {
                 if (item.ProcessorName == (sender as ComboBox).SelectedValue.ToString())
                 {
@@ -156,10 +158,11 @@ namespace AccountingApp.Pages
 
         private void FrameNumChange(Tag tag) => AccountingItem.EmployeeData.CampusName = tag.Key;
 
-        private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private async void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             GlobalData.AccountingItemData.Add(AccountingItem);
-            GlobalData.SaveDB();
+            await GlobalData.SaveDBAsync();
+
             ReturnToMain(null, null);
         }
     }
